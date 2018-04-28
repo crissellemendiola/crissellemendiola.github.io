@@ -8,6 +8,67 @@
 <style>
 body {font-family: "Raleway", Arial, sans-serif}
 .w3-row img {margin-bottom: -8px}
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  width: 500px;
+  height: 670px;
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.6);
+  color: #000000;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+  
+  }
+  
+  
+#wrap {
+	height: 750px;
+}
+
+.left {
+	margin:40px;
+	display: inline-block;
+	float:center;
+}
+.right {
+	margin:40px;
+	display: inline-block;
+	float:center;
+	
+	.over { 
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
+}
+
 </style>
 <body>
 
@@ -16,26 +77,39 @@ body {font-family: "Raleway", Arial, sans-serif}
 
   <!-- Header -->
   <header class="w3-container w3-xlarge w3-padding-24">
-    <a href="#" class="w3-left w3-button w3-white">MY ART</a>
+    <a href="#" class="w3-left w3-button w3-white">Crisselle Mendiola</a>
+    <a href="https://www.instagram.com/crissellescaricatures/" class="w3-right w3-button w3-white">Instagram</a>
     <a href="#about" class="w3-right w3-button w3-white">About</a>
   </header>
 
   <!-- Photo Grid -->
-  <div class="w3-row">
-    <div class="w3-half">
-      <img src="./facepaint/fp1.jpeg" style="width:100%">
-      <img src="./facepaint/fp2.jpeg" style="width:100%">
-	  <img src="./facepaint/fp3.jpeg" style="width:100%">
-	  <img src="./facepaint/fp4.jpeg" style="width:100%">
-	  <img src="./facepaint/fp5.jpeg" style="width:100%">
-	  <img src="./facepaint/fp6.jpeg" style="width:100%">
-    </div>
-
-    <div class="w3-half">
-      <img src="/w3images/streetart3.jpg" style="width:100%">
-      <img src="/w3images/streetart4.jpg" style="width:100%">
-    </div>
-  </div>
+<div id="wrap" align="center">
+	<div class="left" >
+		<div class="img__wrap">
+		<a href="./facepaint.html" style="text-decoration:none"><img class="img__img" src="./facepaint/fp6.jpeg" width="500"/>
+		<div class="img__description_layer">
+		<div class="over">
+		<font size="7"> <p class="img__description" >Face Paint</p> </font>
+		</a>
+		</div>
+		</div>
+		</div>
+	</div>	
+	
+	<div class="left" >
+		<div class="img__wrap">
+		<a href="./caricature.html" style="text-decoration:none"><img class="img__img" src="./caricature/c5.jpeg" width="500"/>
+		<div class="img__description_layer">
+		<div class="over">
+		<font size="7"> <p class="img__description" >Caricatures</p> </font>
+		</a>
+		</div>
+		</div>
+		</div>
+	</div>	
+	
+</div>
+   
   
 <!-- End Page Content -->
 </div>
@@ -43,9 +117,9 @@ body {font-family: "Raleway", Arial, sans-serif}
 <!-- Footer / About Section -->
 <footer class="w3-light-grey w3-padding-64 w3-center" id="about">
   <h2>About</h2>
-  <img src="/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
+  <img src="./crisselle.jpeg" class="w3-image w3-padding-32" width="300" height="300">
   <form style="margin:auto;width:60%" action="https://formspree.io/crissellecm@gmail.com" method="POST"> 
-    <p>Crisselle is a So Cal bases caricature artist and face painter who does events and parties.</p>
+    <p>Crisselle Mendiola is a fast and talented artist who is available for events and parties in the Los Angeles and Orange County area.</p>
     <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
     <div class="w3-section">
       <label><b>Name</b></label>
@@ -62,7 +136,6 @@ body {font-family: "Raleway", Arial, sans-serif}
     <button type="submit" value="Send" class="w3-button w3-block w3-dark-grey">Send</button>
   </form>
   <br>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
 </body>
